@@ -69,6 +69,44 @@ def apply_shield(img):
 
 
 # ---------- Routes ----------
+@app.route('/', methods=['GET'])
+def index():
+    """Landing page shown in HF Spaces iframe."""
+    return '''
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>NeuroScan API</title>
+        <style>
+            body { font-family: system-ui, sans-serif; background: #0b1326; color: #dae2fd; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+            .container { text-align: center; max-width: 500px; padding: 2rem; }
+            h1 { color: #00e5ff; font-size: 2rem; }
+            p { color: #849396; line-height: 1.6; }
+            a { color: #00e5ff; text-decoration: none; }
+            a:hover { text-decoration: underline; }
+            .status { background: #171f33; border: 1px solid #3b494c; border-radius: 12px; padding: 1rem; margin: 1.5rem 0; }
+            .badge { display: inline-block; background: #00e5ff22; color: #00e5ff; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🧠 NeuroScan API</h1>
+            <p>Adversarial-robust Brain Tumor Classification API</p>
+            <div class="status">
+                <span class="badge">✅ Running</span>
+                <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem;">Model loaded: ''' + str(MODEL_LOADED) + '''</p>
+            </div>
+            <p><strong>Endpoints:</strong></p>
+            <p><a href="/api/health">/api/health</a> — Health check<br>
+               <code>POST /api/analyze</code> — Upload MRI for diagnosis</p>
+            <hr style="border-color: #3b494c; margin: 1.5rem 0;">
+            <p>Frontend: <a href="https://neuro-scan-dusky.vercel.app" target="_blank">neuro-scan-dusky.vercel.app</a></p>
+        </div>
+    </body>
+    </html>
+    '''
+
+
 @app.route('/api/health', methods=['GET'])
 def health():
     return jsonify({
