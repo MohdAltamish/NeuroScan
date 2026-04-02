@@ -301,6 +301,40 @@ Open `frontend/index.html` in a browser (requires Flask API running on port 5050
 
 ---
 
+## 🎨 Modern SPA Frontend & Clinical Dashboard
+
+NeuroScan features a high-performance, single-page application (SPA) built with Vanilla JS and CSS, designed for rapid clinical decision support. The interface connects seamlessly to the Flask REST API to provide real-time diagnostics and system monitoring.
+
+### 🏠 Main Workstation (Dashboard)
+The central hub for clinical operations, providing a high-level overview of engine status, API connectivity, and recent diagnostic activity.
+![Dashboard](presentation_assets/web-screenshot/dashboard.png)
+
+### 🔬 Diagnostic Pipeline
+A deep-dive view into the 3-stage analysis: Original Scan → OmniChaos Attack → Shielded Recovery. Radiologists can verify the AI's robustness before confirming a diagnosis.
+![Diagnostic Pipeline](presentation_assets/web-screenshot/diagnostic_pipeline.png)
+
+### 🗂️ Batch Auditor
+Designed for large-scale clinical audits, the Batch Auditor processes ZIP archives of MRI scans, generating comprehensive performance metrics and match-confidence reports.
+![Batch Auditor](presentation_assets/web-screenshot/batch_auditor.png)
+
+### 📊 AI Insights & Ecosystem
+Real-time tracking of anomaly detection rates, engine efficiency, and dataset metrics. This module ensures the model is performing within clinical safety parameters.
+![AI Insights](presentation_assets/web-screenshot/ai_insights.png)
+
+### 👥 Clinical Repository (Patient Records)
+A secure management system for neurological profiles, allowing physicians to search, filter, and review historical scan results.
+![Patient Records](presentation_assets/web-screenshot/patient_records.png)
+
+### 📜 System Audit Log
+An immutable ledger of every system interaction, from user logins to parameter overrides, ensuring full clinical accountability and traceability.
+![Audit Log](presentation_assets/web-screenshot/audit_log.png)
+
+### ⚙️ Engine Control Center (System Config)
+Advanced configuration for the Neural Core, allowing real-time adjustment of AI sensitivity profiles and operational protocols.
+![System Config](presentation_assets/web-screenshot/system_config.png)
+
+---
+
 ## 📊 Experiment Results
 
 The system was developed through 5 iterative experiments, each with a hypothesis, architecture change, results, and analysis:
